@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  width: 70rem;
+  height: 6.5rem;
+  z-index: 1;
+}
+
+.navbar_left {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_left::before {
+  content: '';
+  position: absolute;
+  background-color: var(--color-white);
+  width: 50rem;
+  left: -50rem;
+  height: 6.5rem;
+}
+
+.navbar_right {
+  display: flex;
+  padding: 0;
+}
+
+.navbar_right li {
+  list-style: none;
+  display: block;
+  line-height: 6.5rem;
+  padding-inline: 1rem;
+  cursor: pointer;
+}
+
+.navbar_right li:hover {
+  background-color: #2494c4;
+}
+
+.navbar_right a {
+  color: var(--color-white);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.toggle_button {
+  display: none;
+}
+
+.logo {
+  height: 6.5rem;
+  background-color: var(--color-white);
+  padding-inline: 6.5rem;
+}
+
+@media (max-width: 1400px) {
+  .navbar {
+    width: 80%;
+  }
+
+  .logo {
+    padding-inline: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+
+  .logo {
+    padding-inline: 2.5rem;
+  }
+
+  .navbar_right {
+    display: none;
+  }
+
+  .navbar_right li {
+    line-height: 4.1rem;
+  }
+
+  .toggle_button {
+    display: block;
+    cursor: pointer;
+    padding: 2.2rem;
+  }
+
+  .toggle_button:hover {
+    background-color: #2494c4;
+  }
+
+  .toggle_button .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: transform 0.4s ease;
+  }
+
+  .toggle_button.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle_button.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle_button.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar_right.show {
+    display: flex; /* Wyświetl linki, gdy przycisk jest aktywny na urządzeniach mobilnych */
+    flex-direction: column;
+    position: absolute;
+    top: 5.4rem;
+    left: 0;
+    right: 0;
+    padding-top: 1rem;
+    background-color: var(--color-main);
+    z-index: 99;
+    padding: 0;
+  }
+
+  .navbar_right.show a {
+    margin: 0;
+  }
+}

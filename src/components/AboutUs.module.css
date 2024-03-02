@@ -1,0 +1,13 @@
+.container_about_us {
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MAX 1200px */
+@media (max-width: 75rem) {
+    .container_about_us {
+        width: 100%;
+    }
+}
