@@ -28,7 +28,8 @@ export const FontSizeProvider = ({ children }) => {
   const [fontColor, setFontColor] = useState('black');
 
   const changeContrast = () => {
-    setBackgroundColor('yellow');
+    setBackgroundColor('black');
+    setFontColor('yellow');
   };
 
   const resetChanges = () => {

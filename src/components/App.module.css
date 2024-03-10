@@ -68,3 +68,19 @@ h1 {
   color: #fff;
   font-size: 4rem;
 }
+
+@media screen and (max-width: 768px) {
+  .button_container {
+    left: 2.5rem;
+  }
+
+  .button_container > * {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .icons {
+    padding-left: 0;
+    width: 2rem;
+  }
+}
